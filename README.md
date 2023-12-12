@@ -12,7 +12,7 @@ A streamlined Node.js e-commerce platform with simple admin management and a JSO
 ## Quick Start
 
 # Install dependencies
-```bash
+
 ```bash
 npm install
 ```
