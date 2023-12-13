@@ -1,4 +1,3 @@
-@import url("var.css");
 body{
 	width: 100%;
 	height: 100vh;
@@ -8,5 +7,6 @@ body{
 	width: 100%;
 	height: 100vh;
 	margin: 0 auto;
-	padding: 0 5rem;
+	display: grid;
+	grid-template-rows: 15% minmax(85%,1fr);
 }
