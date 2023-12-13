@@ -3,7 +3,7 @@ const routes = express.Router()
 const productsControllers = require('../controllers/shop.js')
 
 
-routes.post('/add-products',productsControllers.PostProducts)
+routes.get('/add-products',productsControllers.GetProducts)
 
 
 module.exports = routes
