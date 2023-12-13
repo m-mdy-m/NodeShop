@@ -23,9 +23,7 @@ module.exports = class Product{
         getPro(products =>{
             this.id = Math.random().toString();
             products.push(this);
-            fs.writeFile(pth, JSON.stringify(products), err=>{
-                console.log('ERR FILE =>', err);
-            })
+            fs.writeFile(pth, JSON.stringify(products))
         })
         
     }
