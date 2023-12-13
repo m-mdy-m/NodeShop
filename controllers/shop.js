@@ -6,16 +6,12 @@ exports.GetProducts = (req, res) => {
   });
 };
 exports.PostProducts = (req, res) => {
+  console.log('req =>',req.body);
   const title = req.body.title;
-  const img = req.body.img;
+  const img = req.body.image;
   const price = req.body.price;
   const description = req.body.description;
-  console.log(title);
-  console.log(img);
-  console.log(price);
   const products = new Product(null, title, img, price, description);
-  console.log('pro=>', products);
   products.save();
-  console.log('ss =>', products.save());
   res.redirect("/");
 };
