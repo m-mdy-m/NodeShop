@@ -11,3 +11,8 @@ exports.getDashboard = (req,res,next)=>{
     })
     
 }
+exports.postDelete = (req,res,next)=>{
+    const prodsId = req.body.productId;
+    Product.deleteById(prodsId)
+    res.redirect('/admin/dashboard')
+}

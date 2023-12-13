@@ -25,7 +25,12 @@ module.exports = class Product{
             products.push(this);
             fs.writeFile(pth, JSON.stringify(products))
         })
-        
+    }
+    static deleteById(id){
+        getPro((products) => {
+            const prodsId  = products.find(prods => prods.id === id)
+            console.log(prodsId);
+        })
     }
     static fetchALL(cb){
         getPro(cb)
