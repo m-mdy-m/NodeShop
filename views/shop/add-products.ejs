@@ -4,14 +4,14 @@
 <%- include("../includes/header.ejs")  %>
 
 <main class="main">
-        <form action="/add-product" method="POST" class="form">
+        <form action="/add-products" method="POST" class="form">
                 <div class="form__control">
                         <input type="text" name="title" class="titleInput inputs" placeholder="Please type title">
                         <label for="title">TItle </label>
                 </div>
                 <div class="form__control">
                         <label for="image">Image URl</label>
-                        <input type="file" name="image" class="imgInput inputs">
+                        <input type="text" name="image" class="imgInput inputs">
                 </div>
                 <div class="form__control">
                         <label for="price">Price</label>

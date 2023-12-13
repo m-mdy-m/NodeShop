@@ -1,6 +1,11 @@
+const Product = require("../models/Product")
+
 exports.getHome = (req, res) => {
-  res.render("home", {
-    TitlePage:'HOME',
-    path: req.path,
-  });
+  Product.fetchALL(products =>{
+    res.render("home", {
+      prods : products,
+      TitlePage:'HOME',
+      path: req.path,
+    });
+  })
 };

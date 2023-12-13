@@ -3,15 +3,21 @@
 </head>
 <%- include("includes/header.ejs")  %>
 
-<main>
+<main>  
+    <% if (prods.length > 0) {%>
+        <% for (let products of prods){ %>
         <div class="wrapper__product">
-            <h1 class="Product__title">title</h1>
+            <h1 class="Product__title"> <%= products.title %> </h1>
             <div class="wrapper__img">
-                <img src="/assets/image/img.jpg" alt="Images" class="Product__img">
+                <img src="<%= products.img %>" alt=" <%= products.title %> " class="Product__img">
             </div>
-            <h4 class="Product__Price">$400</h4>
-            <p class="Product__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, voluptatibus?</p>
+            <h4 class="Product__Price"> <%= products.price %> </h4>
+            <p class="Product__description"> <%= products.description %> </p>
         </div>
+        <% } %>
+    <% }else{ %>
+        <h1>NO Products</h1>
+    <% } %>
 </main>
 
 <%- include("includes/end.ejs")  %>
